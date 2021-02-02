@@ -1,6 +1,6 @@
 {
   "name": "@fusebit/atlassian-connector",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Fusebit Connector for Atlassian",
   "main": "lib/index.js",
   "license": "MIT",
