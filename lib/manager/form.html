@@ -80,6 +80,7 @@
               vendor_oauth_extra_params: 'prompt=consent',
               vendor_name: 'Contoso',
               vendor_prefix: 'contoso',
+              fusebit_additional_imports: '@atlassian/jira@^0.1.0',
               fusebit_allowed_return_to: '*'
           });
           const isRequired = {
@@ -177,6 +178,7 @@
                                   {getInput('vendor_oauth_scope', 'Vendor\'s OAuth scope', 'OAuth scopes to request when obtaining tokens')}
                                   {getInput('vendor_oauth_audience', 'Vendor\'s OAuth audience', 'OAuth audience to request when obtaining tokens')}
                                   {getInput('vendor_oauth_extra_params', 'Vendor\'s OAuth additional parameters', 'Additional OAuth authorization request parameters, &-delimited and URL encoded')}
+                                  {getInput('fusebit_additional_imports', 'Vendor-specific package imports, comma-delimited. Always include the desired semver, i.e. package@semver.')}
                                   {getInput('fusebit_allowed_return_to', 'Allowed returnTo URLs', 'Allowed returnTo URLs, newline/comma/semicolon/space delimited. You can specify a wildcard (*) at the end of a URL to allow for a prefix match.')}
                               </Grid>
                           </Grid>
