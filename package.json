@@ -7,7 +7,9 @@
   "author": "https://fusebit.io",
   "packageAs": "@fusebit/atlassian-connector",
   "keywords": [],
-  "files": ["lib/**"],
+  "files": [
+    "lib/**"
+  ],
   "peerDependencies": {
     "superagent": "6.1.0"
   },
