@@ -3,6 +3,6 @@
     "node": "10"
   },
   "dependencies": {
-    "@fusebit/atlassian-connector": "1.0.0-0"
+    "@fusebit/atlassian-connector": "1.0.0"
   }
 }
