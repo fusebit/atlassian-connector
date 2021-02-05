@@ -165,7 +165,7 @@
           }
           return (
             <Button variant="contained" color="primary" href="##authorizationUrl##">
-              Use Atlassian Cloud
+              {basicAuthUrl ? 'Use Atlassian Cloud' : 'Next'}
             </Button>
           );
         };
