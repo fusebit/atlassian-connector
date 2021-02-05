@@ -43,6 +43,35 @@ In case of a failure, you can get useful, verbose diagnostic information with:
 debug=1 FUSE_PROFILE={profile-name} npm test
 ```
 
+## Example code
+
+### Create a Jira client
+Modify the lib/manager/template/package.json to include "@atlassian/jira", and then use this function to
+create a client:
+
+```
+const JIRA = require('@atlassian/jira');
+
+async createJiraClient(fusebitContext, userContext) {
+  if (userContext.vendorToken.mode === 'basic') {
+		const jira = new JIRA({baseUrl: `${userContext.vendorToken.servername}/rest`);
+		jira.authenticate({
+      type: 'basic',
+      username: userContext.vendorToken.username,
+      password: userContext.vendorToken.password
+    });
+    return jira;
+  }
+
+  // Create a OAuth backed Jira client
+  const tokenContext = await this.ensureAccessToken(fusebitContext, userContext);
+  const jira = new JIRA();
+  jira.authenticate({ type: 'token', token: tokenContext.access_token });
+
+  return jira;
+}
+```
+
 ## Release notes
 
 ### 1.0.0
