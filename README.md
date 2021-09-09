@@ -46,6 +46,7 @@ debug=1 FUSE_PROFILE={profile-name} npm test
 ## Example code
 
 ### Create a Jira client
+
 Modify the lib/manager/template/package.json to include "@atlassian/jira", and then use this function to
 create a client:
 
@@ -73,6 +74,10 @@ async createJiraClient(fusebitContext, userContext) {
 ```
 
 ## Release notes
+
+### 1.1.1
+
+- Upgrade to oauth-connector 1.3.1.
 
 ### 1.1.0
 
